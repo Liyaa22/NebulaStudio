@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto y Carreras | Nebula Studio</title>
+    <meta name="description"
+        content="Contacta con Nebula Studio para consultas comerciales o únete a nuestro equipo de desarrollo.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="assets/logo.png" alt="Nebula Studio Logo">
+                <span class="logo-text">NEBULA <span>STUDIO</span></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html" class="btn btn-nav">Inicio</a>
+                <a href="proyectos.html" class="btn btn-nav">Proyectos</a>
+                <a href="contacto.html" class="btn btn-nav">Contáctanos</a>
+                <a href="#careers" class="btn btn-outline">Unete a nosotros</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <div style="padding-top: 150px; background: var(--bg-dark);">
+            <section id="contact" class="contact-section">
+                <div class="container">
+                    <div class="contact-grid">
+                        <div class="contact-info">
+                            <h2>Contacto <span>Corporativo</span></h2>
+                            <p>Para consultas comerciales, prensa o colaboraciones, nuestro equipo está a su
+                                disposición.</p>
+                            <div class="social-links">
+                                <a href="#" class="social-icon">Twitter</a>
+                                <a href="#" class="social-icon">LinkedIn</a>
+                                <a href="#" class="social-icon">Discord</a>
+                            </div>
+                        </div>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <input type="text" placeholder="Su Nombre" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Dirección de Email" required>
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Mensaje o consulta" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                        </form>
+                    </div>
+
+                    <div id="careers" class="recruitment-block">
+                        <h3>¿Quieres formar parte de nuestro <span>equipo?</span></h3>
+                        <p>En Nebula Studio valoramos la creatividad, la pasión y el rigor técnico. Estamos
+                            constantemente buscando nuevos talentos en ingeniería, diseño y arte para dar vida a
+                            nuestras próximas visiones.</p>
+                        <button class="btn btn-secondary">Enviar Currículum (PDF)</button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Nebula Studio. Excelencia en Desarrollo.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
