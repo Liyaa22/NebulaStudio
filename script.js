@@ -37,19 +37,56 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             const btn = contactForm.querySelector('button');
             const originalText = btn.textContent;
-            
-            btn.textContent = 'Enviando...';
+
+            btn.innerHTML = 'Enviando <span class="loading-dots">...</span>';
             btn.disabled = true;
 
             setTimeout(() => {
-                btn.textContent = '¡Mensaje Enviado!';
+                btn.innerHTML = '¡Mensaje Enviado!';
+                btn.style.background = '#28a745';
                 contactForm.reset();
-                
+
                 setTimeout(() => {
                     btn.textContent = originalText;
                     btn.disabled = false;
+                    btn.style.background = '';
                 }, 3000);
             }, 1500);
+        });
+    }
+
+    // Careers / CV Upload handling
+    const cvInput = document.getElementById('cv-upload');
+    const cvBtn = document.getElementById('send-cv-btn');
+
+    if (cvBtn && cvInput) {
+        cvBtn.addEventListener('click', () => {
+            cvInput.click();
+        });
+
+        cvInput.addEventListener('change', (e) => {
+            if (e.target.files.length > 0) {
+                const fileName = e.target.files[0].name;
+                const originalText = cvBtn.textContent;
+
+                cvBtn.innerHTML = `Subiendo: ${fileName.split('\\').pop()}...`;
+                cvBtn.disabled = true;
+
+                // Simulate upload process
+                setTimeout(() => {
+                    cvBtn.innerHTML = '¡Currículum Recibido!';
+                    cvBtn.style.borderColor = '#28a745';
+                    cvBtn.style.color = '#28a745';
+
+                    setTimeout(() => {
+                        cvBtn.textContent = originalText;
+                        cvBtn.disabled = false;
+                        cvBtn.style.borderColor = '';
+                        cvBtn.style.color = '';
+                        cvInput.value = ''; // Reset input
+                    }, 4000);
+                }, 2000);
+            }
         });
     }
 
